@@ -28,7 +28,7 @@ client.on('message', async msg => {
     let command = msg.content.toLowerCase().split(" ")[0];
     command = command.slice(prefix.length)
 
-    if (message.startsWith(prefix + 'play')) {
+     else if (command === `play`) {
         if (!message.member.voiceChannel) return message.channel.send('You must be in my audio room :microphone2:');
         // if user is not insert the URL or song title
         if (args.length == 0) {
