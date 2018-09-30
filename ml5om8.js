@@ -52,8 +52,8 @@ message.channel.send(`Now playing : **( ${videoInfo.title} )** :musical_note: `)
                 });
             });
         } 
-    }   
- } else if (command === `skip`) {
+      
+  else if (command === `skip`) {
         if (!msg.member.voiceChannel) return msg.channel.send('أنت لست بروم صوتي .');
         if (!serverQueue) return msg.channel.send('لا يتوفر مقطع لتجآوزه');
         serverQueue.connection.dispatcher.end('تم تجآوز هذآ المقطع');
